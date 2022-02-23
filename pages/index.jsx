@@ -9,8 +9,8 @@ import Footer from '../components/Footer';
 
 export default function Home() {
 
-  const onClickIntroButton = () => {
-    document.getElementById("about").scrollIntoView({behavior: 'smooth'})
+  const goSection = (sectionId) => {
+    document.getElementById(sectionId).scrollIntoView({behavior: 'smooth'})
   }
 
   return (
@@ -20,10 +20,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
+      <Navbar onGoSection={goSection}/>
       <main>
-        <Intro onClickButton={onClickIntroButton} />
-        <About />
+        <Intro onClickButton={() => {goSection('about')}} />
+        <About onGoContact={() => {goSection('contact')}}/>
         <Skills />
         <Works />
         <Contact />

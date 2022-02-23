@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function About() {
+export default function About({ onGoContact }) {
   return (
     <>
       <div className="section-bg about" id="about">
@@ -16,14 +16,14 @@ export default function About() {
               Dedico una parte importante de mi tiempo en formación, lo que me permite estar siempre al tanto de las últimas tecnologías y ofrecer siempre la mejor solución para cada proyecto.
             </p>
             <p>
-              Más recientemente me estoy abriendo y formando en el sector de la Visión Artificial y Realidad Aumentada, participando ya en algun proyecto interesante.
+              Más recientemente me estoy abriendo y formando en el sector de la Realidad Aumentada, donde estoy sacando adelante un proyecto con bastante éxito. También he hecho pequeños proyectos relacionados con el Blockchain
             </p>
             <p>
               No dudes en contactarme si tienes un proyecto o idea que quieras poner en marcha y necesitas de alguien que te lleve la tecnología o simplemente asesoramiento.
             </p>
           </div>
           <div className="button-container">
-            <button className='button'>Contactar</button>
+            <button className='button' onClick={onGoContact}>Contactar</button>
           </div>
         </div>
       </div>

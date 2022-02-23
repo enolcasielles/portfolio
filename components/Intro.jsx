@@ -9,7 +9,7 @@ export default function Intro({ onClickButton }) {
     <>
       <div className="container intro">
         <h3 className="title">Soy Enol Casielles</h3>
-        <p>Desarrollo Aplicaciones móviles y Webs a medida usando tecnologías punteras. También hago proyectos de Visión Artificial y Realidad Aumentada.</p>
+        <p>Desarrollo Aplicaciones móviles y Webs a medida usando tecnologías punteras. Como desarrollador Full Stack puedo llevar proyectos abarcando todas sus partes.</p>
         <div className="button-container">
           <button className="button" onClick={onClickButton}>Saber Más</button>
         </div>
@@ -36,6 +36,7 @@ export default function Intro({ onClickButton }) {
           margin-bottom: 40px;
         }
         .image-container {
+          max-width: 100%;
           text-align: right;
           position: absolute;
           bottom: 0;
@@ -43,6 +44,7 @@ export default function Intro({ onClickButton }) {
           display: flex;
         }
         .image-container img {
+          max-width: 100%;
         }
       `}</style>
     </>

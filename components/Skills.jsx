@@ -7,11 +7,12 @@ const CONTENT = {
     {title: 'Apps', descr: 'Flutter'}
   ],
   'back-end': [
-    {title: 'Lenguajes', descr: 'Javascript • Typescript • Dart • ES6 • SASS'},
-    {title: 'Web', descr: 'React • Next.js • Redux'},
+    {title: "API's", descr: 'Node • Express • Firebase'},
+    {title: 'Bases de datos', descr: 'MongoDB • DynamoDB • Aurora • MySQL'},
   ],
   'other': [
-    {title: 'Lenguajes', descr: 'Javascript • Typescript • Dart • ES6 • SASS'},
+    {title: 'Realidad Aumentada', descr: 'Wikitude • ARKit • ARCore • AR.js'},
+    {title: 'Blockchain', descr: 'Solidity • Truffle • web3.js'},
   ],
 }
 
@@ -24,10 +25,10 @@ export default function Skills() {
 
   return (
     <>
-      <div className="skills">
+      <div className="skills" id="skills">
         <div className="container">
           <h1 className="section-title">
-            SOBRE MÍ
+            HABILIDADES
           </h1>
           <div className="tabs">
             <div onClick={() => {setSelectedTab('front-end')}} className={'tab' + (selectedTab == 'front-end' ? ' selected' : '')}>
@@ -88,7 +89,7 @@ function SkillsList(items) {
 
   let content = items.map((item) => {
     return (
-      <>
+      <div key={item.title}>
         <div className="title">{item.title}</div>
         <div className='descr'>{item.descr}</div>
         <style jsx>{`
@@ -100,7 +101,7 @@ function SkillsList(items) {
             margin-bottom: 20px;
           }
         `}</style>
-      </>
+      </div>
     );
   });
 

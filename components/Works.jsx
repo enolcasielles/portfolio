@@ -20,12 +20,13 @@ export default function Works() {
       <div className="section-bg works" id="works">
         <div className="container">
           <h1 className="section-title">
-            TRABAJOS
+            TRABAJOS RECIENTES
           </h1>
           <div className="content">
           <Swiper navigation={true} pagination={true} className="mySwiper">
-            <SwiperSlide>{Work(null, "Mooviment", "App para Android e iOS desarrollada con Flutter. Incorpora Realidad Aumentada utilizando la tecnología Wikitude.")}</SwiperSlide>
-            <SwiperSlide>{Work()}</SwiperSlide>
+            <SwiperSlide>{Work("#583C8A", "images/works/mooviment.png", "Mooviment", "App para Android e iOS desarrollada con Flutter. Incorpora Realidad Aumentada utilizando la tecnología Wikitude. Desarrollo Web con React y Angular. Base de datos en AWS con DynamoDB")}</SwiperSlide>
+            <SwiperSlide>{Work("#62c9ba", "images/works/tappy.png", "Tappy", "App desarrollada con Flutter y API con Node y Typescript. Base de datos MySQL con Aurora. Panel Web desarrollado con React. Despliegue de toda la infraestructura en AWS")}</SwiperSlide>
+            <SwiperSlide>{Work("#fff", "images/works/airhopping.png", "Airhopping", "App desarrollada en Flutter con más de 100K descargas en las store. Utiliza Bloc para el manejo del estado. Aplicación muy completa con mucha funcionalidad.")}</SwiperSlide>
           </Swiper>
           </div>
         </div>
@@ -51,12 +52,12 @@ export default function Works() {
   )
 }
 
-function Work(image, title, descr) {
+function Work(bgColor, image, title, descr) {
   return (
     <>
       <div className='work' >
-        <div className="image">
-          
+        <div className="image" style={{backgroundColor: bgColor}}>
+          <img src={image} alt="" />
         </div>
         <div className="title">
           {title}
@@ -77,6 +78,11 @@ function Work(image, title, descr) {
           width: 340px;
           border-radius: 6px;
           background-color: #583C8A
+        }
+        .image img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
         }
         .title {
           font-weight: bold;

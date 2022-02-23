@@ -10,14 +10,14 @@ export default function Contact() {
           </h1>
           <div className="content">
             <div className="section">
-              <h5>Agendar una llamada</h5>
-              <p> ¿Quieres realizar cualquier consulta para cualquier idea o proyecto que tengas en marcha? Agenda una llamada cuando mejor te venga y me comentas ;) </p>
-              <a>Reservar ahora</a>
+              <h5>Teléfono</h5>
+              <p> ¿Quieres realizar cualquier consulta para cualquier idea o proyecto que tengas en marcha? Llámame y lo comentamos ;) </p>
+              <a href="tel:+34639726998">639726998</a>
             </div>
             <div className="section">
               <h5>Email</h5>
               <p> O si lo prefieres contáctame por  correo, te contestaré en menos de 24h ;) </p>
-              <a>info@enolcasielles.com</a>
+              <a href="mailto:enolcasielles@gmail.com">enolcasielles@gmail.com</a>
             </div>
           </div>
 
@@ -26,6 +26,7 @@ export default function Contact() {
       <style>{`
         .contact {
           padding-top: 30px;
+          padding-bottom: 30px;
         }
         .container {
           text-align: center;

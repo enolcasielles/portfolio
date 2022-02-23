@@ -1,9 +1,12 @@
 
-export default function Navbar() {
+export default function Navbar({ onGoSection }) {
   return (
     <>
       <div className='navbar'>
-        Menu
+        <div className="item" onClick={() => {onGoSection('about')}}>SOBRE MÍ</div>
+        <div className="item" onClick={() => {onGoSection('skills')}}>HABILIDADES</div>
+        <div className="item" onClick={() => {onGoSection('works')}}>TRABAJOS</div>
+        <div className="item" onClick={() => {onGoSection('contact')}}>CONTACTO</div>
       </div>
 
       <style jsx>{`
@@ -15,6 +18,15 @@ export default function Navbar() {
           justify-content: center;
           align-items: center;
           box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        }
+        .item {
+          cursor: pointer;
+          margin: 10px;
+        }
+        @media (max-width: 768px) {
+          .item {
+            font-size: 12px;
+          }
         }
       `}</style>
     </>
