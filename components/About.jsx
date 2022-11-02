@@ -10,7 +10,7 @@ export default function About({ onGoContact }) {
           </h1>
           <div className="content">
             <p>
-              ¡Hola! Mi nombre es Enol Casielles. Trabajo como desarrollador Full Stack haciendo aplicaciones móviles y sitios web a medida. A lo largo de los últimos 10 años he particidado en numerosos proyectos tanto de front como de back y usando distitnas tecnologías.
+              ¡Hola! Mi nombre es Enol Casielles. Trabajo como desarrollador Full Stack haciendo aplicaciones móviles y sitios web a medida. A lo largo de los últimos 10 años he participado en numerosos proyectos tanto de front como de back y usando distintas tecnologías.
             </p>
             <p>
               Dedico una parte importante de mi tiempo en formación, lo que me permite estar siempre al tanto de las últimas tecnologías y ofrecer siempre la mejor solución para cada proyecto.
